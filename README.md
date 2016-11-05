@@ -12,5 +12,5 @@ How I use this in Linux:
 For Mac OS, you will need to use the socat trick in order to pipe the X11
 display for observer.
 
-This build is based on wschroeder/erlang:19.1.5.
+This build is based on wschroeder/erlang:19.1.5 on docker hub.
 
