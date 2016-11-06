@@ -14,3 +14,13 @@ display for observer.
 
 This build is based on wschroeder/erlang:19.1.5 on docker hub.
 
+
+# Slim
+
+I am also providing a slim version to docker hub that is not the result of an
+automated build because I do not know how to ask hub to automate re-exporting.
+The slim version is the same as the main version, but I ran this command
+locally:
+
+    docker export wschroeder/elixir:1.3.4 | docker import - wschroeder/elixir:1.3.4-slim
+

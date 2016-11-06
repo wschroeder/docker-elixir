@@ -9,5 +9,8 @@ WORKDIR /root/elixir
 RUN make clean test install
 
 WORKDIR /root
-RUN rm -rf elixir
+RUN rm -rf elixir && \
+    apt-get clean && \
+    apt-get remove $(dpkg -l | awk '{print $2}' | grep '\-dev') && \
+    apt-get autoremove
 
